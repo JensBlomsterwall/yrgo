@@ -65,3 +65,5 @@ Route::get('controller/{string?}', 'SimpleController@index');
  */
 
 Route::get('students', 'StudentController@index');
+
+Route::get('students/{name}', 'StudentController@show');

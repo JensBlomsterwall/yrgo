@@ -15,4 +15,14 @@ class StudentController extends Controller {
         return view('students', compact('students'));
 	}
 
+    public function show($name)
+    {
+        $student =  Student::where('first_name', $name)->first();
+        if(null == $student) {
+            abort(404);
+        }
+
+        return view('student', compact('student'));
+    }
+
 }
