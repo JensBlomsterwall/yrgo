@@ -58,3 +58,10 @@ Route::get('template-variables', function(){
  * Ex: my.app/controller/thiscouldbeanything
  */
 Route::get('controller/{string?}', 'SimpleController@index');
+
+
+/*
+ * Test för vår Model
+ */
+
+Route::get('students', 'StudentController@index');
